@@ -1,0 +1,64 @@
+@import "https://rsms.me/inter/inter.css";
+@import "radio";
+@import "variables";
+@import "top";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter var";
+  user-select: none;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border: none;
+}
+
+body {
+  background: var(--background);
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  @media (max-width: 900px) {
+    border-radius: 1rem 1rem;
+  }
+  &_inner {
+    max-width: 1000px;
+    width: 100%;
+    padding: 3rem 2rem;
+    gap: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+}
+
+.skeleton {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background2);
+  animation: skeleton 3s ease alternate infinite;
+  border-radius: inherit;
+}
+@keyframes skeleton {
+  100% {
+    background-color: var(--background3);
+  }
+}

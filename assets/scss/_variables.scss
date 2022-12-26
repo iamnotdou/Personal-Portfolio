@@ -1,0 +1,28 @@
+:root {
+  --gradient-color-1: #000000;
+  --gradient-color-2: #ff00aa;
+  --gradient-color-3: #ff0077;
+  --gradient-color-4: #04a3ff;
+  --gradientSize: 200px;
+  --background: white;
+  --foreground: black;
+  --background3: rgb(214, 214, 214);
+  --background2: rgb(224, 224, 224);
+  --foreground2: rgb(31, 31, 31);
+  --border: rgb(218, 218, 218);
+  --borderActive: rgb(180, 180, 180);
+}
+
+[data-theme="dark"] {
+  --gradient-color-1: #000000;
+  --gradient-color-2: #ff00aa;
+  --gradient-color-3: #ff0077;
+  --gradient-color-4: #04a3ff;
+  --background: black;
+  --background2: rgb(15, 15, 15);
+  --background3: rgb(34, 34, 34);
+  --foreground: white;
+  --border: rgb(43, 43, 43);
+  --foreground2: gray;
+  --borderActive: rgb(54, 54, 54);
+}

@@ -1,0 +1,145 @@
+#me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  .bold {
+    font-weight: 700;
+    color: var(--foreground);
+  }
+  justify-content: space-between;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    padding: 2rem 0;
+    align-items: center;
+    gap: 2rem;
+  }
+  color: var(--foreground);
+  #memoji {
+    object-fit: cover;
+    position: relative;
+    width: 100px;
+    height: 170px;
+    & > img {
+      height: 170px;
+      left: 0;
+      top: 0;
+      position: absolute;
+      z-index: 30;
+    }
+    &_back {
+      filter: blur(20px);
+      z-index: 20;
+    }
+  }
+  .onlineStatus {
+    display: flex;
+    align-items: center;
+    &_dot {
+      height: 0.5rem;
+      width: 0.5rem;
+      margin-right: 5px;
+      border-radius: 50%;
+      background: #10b991;
+      &.offline {
+        background-color: red;
+      }
+    }
+  }
+  #spotify {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: var(--foreground2);
+    font-weight: 500;
+    span {
+      color: var(--foreground);
+      font-weight: 600;
+    }
+    &_logo {
+      display: flex;
+      justify-content: center;
+      margin-right: 0.5rem;
+      svg {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+  }
+
+  #about {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+    #summary {
+      display: flex;
+      flex-direction: column;
+      @media screen and (max-width: 900px) {
+        align-items: center;
+        text-align: center;
+      }
+      div:nth-child(1) {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+      div:nth-child(2) {
+        font-size: 2.1rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+        position: relative;
+        margin-bottom: 1.5rem;
+        width: fit-content;
+        & > svg {
+          position: absolute;
+          width: 350px;
+          left: 50%;
+          transform: translateX(-50%);
+          top: -40px;
+        }
+      }
+      div:nth-child(3) {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--foreground2);
+      }
+    }
+  }
+}
+.sayHi {
+  display: flex;
+  align-items: center;
+  color: var(--foreground);
+  width: fit-content;
+  gap: 0.5rem;
+  cursor: pointer;
+
+  & > img {
+    height: 1.3rem;
+  }
+  &_text {
+    overflow: hidden;
+    font-weight: 600;
+    height: 32px;
+    &:hover div {
+      transform: translateY(-100%);
+    }
+    & > div {
+      display: flex;
+      transition: 0.15s all cubic-bezier(0.215, 0.61, 0.355, 1);
+      height: 32px;
+      line-height: 32px;
+      flex-shrink: 0;
+    }
+  }
+}

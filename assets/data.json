@@ -1,0 +1,26 @@
+{
+  "data": {
+    "technologies": [
+      "react",
+      "vue",
+      "typescript",
+      "nuxt",
+      "next",
+      "nodejs",
+      "tailwind",
+      "mongodb",
+      "graphql"
+    ],
+    "tools": [
+      "vscode",
+      "vim",
+      "arch",
+      "git",
+      "figma",
+      "photoshop",
+      "illustrator",
+      "sketch",
+      "vite"
+    ]
+  }
+}
