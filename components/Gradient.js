@@ -1,5 +1,9 @@
+import { useTheme } from "next-themes";
 import React, { useEffect } from "react";
+
 function GradientEl() {
+  const { theme, setTheme } = useTheme("dark");
+
   useEffect(() => {
     function normalizeColor(hexCode) {
       return [
@@ -889,9 +893,8 @@ function GradientEl() {
      * Gradient.updateFrequency(freq)
      */
     var gradient = new Gradient();
-    gradient.toggleColor(2);
     gradient.initGradient("#gradient-canvas");
-  }, []);
+  }, [theme]);
 
   return (
     <div id="gradient">

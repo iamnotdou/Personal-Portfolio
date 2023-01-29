@@ -296,6 +296,12 @@
           &_des {
             color: var(--foreground2);
             font-size: 0.9rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* number of lines to show */
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
           }
         }
         &_right {
@@ -329,7 +335,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: auto;
+  margin-top: 10rem;
   cursor: pointer;
   &:hover {
     text-decoration: underline;
@@ -350,5 +356,28 @@ footer {
     width: 20px;
     height: 20px;
     fill: var(--foreground);
+  }
+}
+
+//Blocks Example
+
+#feedback {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  padding: 1rem;
+  &_right {
+    &_input {
+      display: flex;
+      border-radius: 5px;
+      border: 1px solid var(--background3);
+      background: var(--background2);
+      padding: 1rem;
+      & > input {
+        padding-left: 1rem;
+        background: transparent;
+      }
+    }
   }
 }

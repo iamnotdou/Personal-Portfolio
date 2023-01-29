@@ -4,7 +4,6 @@ export default async function handler(req, res) {
   const { data: access_token } = await axios.get(
     `${process.env.BASE_URL}/api/getAccessToken`
   );
-
   axios.defaults.baseURL = "https://api.spotify.com";
   axios.defaults.headers.common["Authorization"] = `Bearer ${access_token}`;
 

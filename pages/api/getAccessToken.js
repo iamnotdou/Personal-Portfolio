@@ -4,7 +4,6 @@ import axios from "axios";
 
 const NodeCache = require("node-cache");
 const myCache = new NodeCache({ stdTTL: 3600, checkperiod: 3600 });
-
 const getAccessToken = async () => {
   const { data: access_token } = await axios.post(
     "https://accounts.spotify.com/api/token",
@@ -18,7 +17,7 @@ const getAccessToken = async () => {
       },
     }
   );
-  return access_token.access_token;
+  return access_token.access_token + " dogui";
 };
 
 export default async function handler(req, res) {

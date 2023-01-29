@@ -17,11 +17,12 @@ const pages = [
   {
     name: "Blog",
     icon: <BlogIcon />,
-    des: " It's going to be ready soon!",
-    warn: {
-      text: "soon",
-      color: "red",
-    },
+    des: "Check out my blog posts written in Turkish!",
+    link: "blog",
+    // warn: {
+    //   text: "soon",
+    //   color: "red",
+    // },
   },
   {
     name: "Projects",
@@ -30,7 +31,7 @@ const pages = [
       text: "soon",
       color: "red",
     },
-    des: "Check out my project that i currently work on",
+    des: "Its coming soon!",
   },
 ];
 function Pages() {

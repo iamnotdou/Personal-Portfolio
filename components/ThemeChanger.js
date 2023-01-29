@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 
 function ThemeChanger() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme("light");
   useEffect(() => {
     setMounted(true);
   }, []);

@@ -2,12 +2,13 @@
 @import "radio";
 @import "variables";
 @import "top";
+@import "blog";
+@import "prism";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter var";
-  user-select: none;
   text-decoration: none;
   outline: none;
   border: none;
@@ -27,9 +28,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  @media (max-width: 900px) {
-    border-radius: 1rem 1rem;
-  }
+
   &_inner {
     max-width: 1000px;
     width: 100%;

@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Albums from "../components/Radio/Albums";
 import Player from "../components/Radio/Player";
 import Recently from "../components/Radio/Recently";
 import TopSongs from "../components/Radio/TopSongs";
 import Suggest from "../components/Radio/Suggest";
 import Head from "next/head";
+import { motion } from "framer-motion";
 function radio() {
   return (
     <>
       <Head>
         <title>Wice - Radio</title>
       </Head>
-      <div className="radio">
+      <motion.div
+        className="radio"
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 3 }}
+      >
         <div className="radio_inner">
           <div className="radio_title">
             Radio
@@ -33,7 +39,7 @@ function radio() {
             <Suggest />
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

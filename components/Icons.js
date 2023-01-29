@@ -1,34 +1,8 @@
 import React from "react";
 
-export function ContactIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <path
-        d="M431 320.6c-1-3.6 1.2-8.6 3.3-12.2a33.68 33.68 0 012.1-3.1A162 162 0 00464 215c.3-92.2-77.5-167-173.7-167-83.9 0-153.9 57.1-170.3 132.9a160.7 160.7 0 00-3.7 34.2c0 92.3 74.8 169.1 171 169.1 15.3 0 35.9-4.6 47.2-7.7s22.5-7.2 25.4-8.3a26.44 26.44 0 019.3-1.7 26 26 0 0110.1 2l56.7 20.1a13.52 13.52 0 003.9 1 8 8 0 008-8 12.85 12.85 0 00-.5-2.7z"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeMiterlimit="10"
-        strokeWidth="32"
-      />
-      <path
-        d="M66.46 232a146.23 146.23 0 006.39 152.67c2.31 3.49 3.61 6.19 3.21 8s-11.93 61.87-11.93 61.87a8 8 0 002.71 7.68A8.17 8.17 0 0072 464a7.26 7.26 0 002.91-.6l56.21-22a15.7 15.7 0 0112 .2c18.94 7.38 39.88 12 60.83 12A159.21 159.21 0 00284 432.11"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeMiterlimit="10"
-        strokeWidth="32"
-      />
-    </svg>
-  );
-}
 export function BranchIcon() {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="ionicon"
-      viewBox="0 0 512 512"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <title>Git Branch</title>
       <circle
         cx="160"
@@ -157,34 +131,6 @@ export function SkillsetIcon() {
   );
 }
 
-export function MailIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <rect
-        x="48"
-        y="96"
-        width="416"
-        height="320"
-        rx="40"
-        ry="40"
-        fill="none"
-        stroke="white"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="32"
-      />
-      <path
-        fill="none"
-        stroke="white"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="32"
-        d="M112 160l144 112 144-112"
-      />
-    </svg>
-  );
-}
-
 export function ProjectsIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -203,27 +149,6 @@ export function ProjectsIcon() {
         strokeLinejoin="round"
         strokeWidth="32"
         d="m69 153.99 187 110 187-110m-187 310v-200"
-      />
-    </svg>
-  );
-}
-export function SocialsIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <circle fill="gray" cx="184" cy="232" r="24" />
-      <path
-        fill="gray"
-        d="M256.05 384c-45.42 0-83.62-29.53-95.71-69.83a8 8 0 0 1 7.82-10.17h175.69a8 8 0 0 1 7.82 10.17c-11.99 40.3-50.2 69.83-95.62 69.83z"
-      />
-      <circle fill="gray" cx="328" cy="232" r="24" />
-      <circle
-        cx="256"
-        cy="256"
-        r="208"
-        fill="none"
-        stroke="currentColor"
-        stroke-miterlimit="10"
-        stroke-width="32"
       />
     </svg>
   );

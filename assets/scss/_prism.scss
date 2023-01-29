@@ -1,0 +1,178 @@
+/*
+ * Laserwave Theme originally by Jared Jones for Visual Studio Code
+ * https://github.com/Jaredk3nt/laserwave
+ *
+ * Ported for PrismJS by Simon Jespersen [https://github.com/simjes]
+ */
+@font-face {
+  font-family: "myfont";
+  src: url("./JetBrainsMono-Medium.b3d28869.woff2") format("woff");
+}
+pre[class*="language-"] {
+  border: 1px solid var(--foreground3);
+  position: relative;
+  &:hover #copy {
+    opacity: 1;
+    transition: 0.25s all ease;
+  }
+  #copy {
+    opacity: 0;
+    position: absolute;
+    width: 20px;
+    top: 1rem;
+    user-select: none;
+    cursor: pointer;
+    right: 1rem;
+    transition: 0.25s all ease;
+    color: var(--foreground2);
+
+    &:hover {
+      color: rgb(212, 210, 210);
+    }
+    &:active {
+      svg {
+        color: greenyellow;
+      }
+    }
+  }
+  &:hover #language_name {
+    opacity: 1;
+  }
+  #language_name {
+    opacity: 0;
+    position: absolute;
+    user-select: none;
+    transition: 0.25s all ease;
+
+    right: 1rem;
+    color: var(--foreground2);
+    bottom: 1rem;
+  }
+}
+code[class*="language-"],
+pre[class*="language-"] {
+  background: #0c0c0c;
+  font-weight: 500;
+  color: #f75c56;
+  font-family: myfont;
+  /* The following properties are standard, please leave them as they are */
+  font-size: 1em;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  /* The following properties are also standard */
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection,
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection {
+  background: #eb64b927;
+  color: inherit;
+}
+
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection,
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection {
+  background: #eb64b927;
+  color: inherit;
+}
+
+/* Properties specific to code blocks */
+pre[class*="language-"] {
+  padding: 2rem; /* this is standard */
+  margin: 1em 0; /* this is the default */
+  overflow: auto; /* this is standard */
+  border-radius: 0.5em;
+}
+
+/* Properties specific to inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.2em 0.3em;
+  border-radius: 0.5rem;
+  white-space: normal; /* this is standard */
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+  color: #91889b;
+}
+
+.token.punctuation {
+  color: #7b6995;
+}
+
+.token.builtin,
+.token.constant,
+.token.boolean {
+  color: #ffe261;
+}
+
+.token.number {
+  color: #b381c5;
+}
+
+.token.important,
+.token.atrule,
+.token.property,
+.token.keyword {
+  color: #40b4c4;
+}
+
+.token.doctype,
+.token.operator,
+.token.inserted,
+.token.tag,
+.token.class-name,
+.token.symbol {
+  color: #74dfc4;
+}
+
+.token.attr-name,
+.token.function,
+.token.deleted,
+.token.selector {
+  color: #ff4187;
+}
+
+.token.attr-value,
+.token.regex,
+.token.char,
+.token.string {
+  color: #b4dce7;
+}
+
+.token.entity,
+.token.url,
+.token.variable {
+  color: #ffffff;
+}
+
+/* The following rules are pretty similar across themes, but feel free to adjust them */
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
