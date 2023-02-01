@@ -67,7 +67,9 @@ function blog({ blog }) {
 
 export default blog;
 export async function getServerSideProps() {
-  const { data: blog } = await axios.get(`${process.env.BASE_URL}/api/notion`);
+  const { data: blog } = await axios.get(`${process.env.BASE_URL}/api/notion`, {
+    headers: { "Accept-Encoding": "gzip,deflate,compress" },
+  });
   return {
     props: {
       blog,
