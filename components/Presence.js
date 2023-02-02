@@ -5,7 +5,7 @@ import Spotify from "./Spotify";
 function Presence() {
   const [data, setData] = useState(null);
   const fetchPresence = () => {
-    fetch("https://api.lanyard.rest/v1/users/902131196912345118")
+    fetch("https://api.lanyard.rest/v1/users/1017034605708185651")
       .then((res) => res.json())
       .then((json) => {
         setData(json.data);
