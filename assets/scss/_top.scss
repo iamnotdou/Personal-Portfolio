@@ -1,10 +1,4 @@
 #me {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  width: 100%;
-  flex-direction: row-reverse;
   .bold {
     font-weight: 700;
     color: var(--foreground);
@@ -17,66 +11,9 @@
     gap: 2rem;
   }
   color: var(--foreground);
-  #memoji {
-    object-fit: cover;
-    position: relative;
-    width: 100px;
-    height: 170px;
-    & > img {
-      height: 170px;
-      left: 0;
-      top: 0;
-      position: absolute;
-      z-index: 30;
-    }
-    &_back {
-      filter: blur(20px);
-      z-index: 20;
-    }
-  }
-  .onlineStatus {
-    display: flex;
-    align-items: center;
-    &_dot {
-      height: 0.5rem;
-      width: 0.5rem;
-      margin-right: 5px;
-      border-radius: 50%;
-      background: #10b991;
-      &.offline {
-        background-color: red;
-      }
-    }
-  }
-  #spotify {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    color: var(--foreground2);
-    font-weight: 500;
-    span {
-      color: var(--foreground);
-      font-weight: 600;
-    }
-    &_logo {
-      display: flex;
-      justify-content: center;
-      margin-right: 0.5rem;
-      svg {
-        width: 1.2rem;
-        height: 1.2rem;
-      }
-    }
-  }
 
   #about {
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
     @media screen and (max-width: 900px) {
       width: 100%;
       align-items: center;

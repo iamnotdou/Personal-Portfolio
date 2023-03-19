@@ -538,7 +538,7 @@ function GradientEl() {
           e(this, "last", 0),
           e(this, "width", void 0),
           e(this, "minWidth", 1111),
-          e(this, "height", 600),
+          e(this, "height", "200"),
           e(this, "xSegCount", void 0),
           e(this, "ySegCount", void 0),
           e(this, "mesh", void 0),
@@ -899,7 +899,6 @@ function GradientEl() {
   return (
     <div id="gradient">
       <canvas id="gradient-canvas"></canvas>
-      <div id="gradient_inner"></div>
     </div>
   );
 }

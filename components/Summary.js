@@ -6,7 +6,7 @@ function Summary() {
       <div>Self Taught</div>
       <div id="summary_front">
         Frontend Developer
-        <svg
+        {/* <svg
           viewBox="0 0 216 108"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ function Summary() {
               <stop offset="0.916667" stopColor="#6248FF" />
             </linearGradient>
           </defs>
-        </svg>
+        </svg> */}
       </div>
       <div>
         Hi there! My name is <span className="bold">Doğu</span> and I am a

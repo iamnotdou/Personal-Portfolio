@@ -2,7 +2,7 @@ import React from "react";
 
 function SayHi() {
   return (
-    <a href="mailto:dogu@wicee.me" className="sayHi">
+    <a href="mailto:wicedev@hotmail.com" className="sayHi">
       <img src="/hand.png" alt="" />
       <div className="sayHi_text">
         <div>Say Hi!</div>
