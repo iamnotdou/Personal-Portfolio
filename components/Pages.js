@@ -49,7 +49,7 @@ function Pages() {
       <div className="font-medium flex text-xl items-center  text-white">
         <PagesIcon className="mr-1 h-5" /> Pages
       </div>
-      <div id="pages_content" className="grid grid-cols-2 gap-4 ">
+      <div id="pages_content" className="grid xl:grid-cols-2 gap-4 grid-cols-1">
         {pages.map(({ name, icon, link, des, warn }) => (
           <div
             id="page"
