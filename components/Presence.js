@@ -3,11 +3,11 @@ import React, { useEffect, useState } from "react";
 function DynamicIsland() {
   const [data, setData] = useState(null);
   const fetchPresence = () => {
-    fetch("https://api.lanyard.rest/v1/users/1017034605708185651")
+    fetch(`/api/getListening`)
       .then((res) => res.json())
       .then((json) => {
-        setData(json.data);
-        console.log(json.data);
+        setData(json);
+        console.log(json);
       });
   };
   useEffect(() => {
@@ -19,7 +19,7 @@ function DynamicIsland() {
   return (
     <>
       <AnimatePresence>
-        {data && data.listening_to_spotify && (
+        {data && data.isPlaying && (
           <motion.div
             exit={{ scale: 0, y: -200, transition: { delay: 1 } }}
             transition={{ duration: 0.3 }}
@@ -27,9 +27,7 @@ function DynamicIsland() {
           >
             <motion.div
               onClick={() => {
-                window.open(
-                  "https://open.spotify.com/track/" + data.spotify.track_id
-                );
+                window.open(data.uri);
               }}
               initial={{
                 maxWidth: 40,
@@ -51,7 +49,10 @@ function DynamicIsland() {
                   delay: 0.45,
                 },
               }}
-              whileTap={{ scale: 0.98, boxShadow: "0 4px 3rem 2px #00000010" }}
+              whileTap={{
+                scale: 0.98,
+                boxShadow: "0 4px 3rem 2px #00000010",
+              }}
               whileHover={{
                 scale: 1.05,
                 maxWidth: 700,
@@ -79,13 +80,14 @@ function DynamicIsland() {
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
                 transition={{ delay: 0.6 }}
                 className="overflow-hidden text-ellipsis "
               >
                 <span className="text-zinc-500">Listening </span>
-                <span>{data.spotify.song + " "}</span>
+                <span>{data.name + " "}</span>
                 <span className="text-zinc-500">by </span>
-                <span>{data.spotify.artist.split(";")[0]}</span>
+                <span>{data.artists}</span>
               </motion.span>{" "}
             </motion.div>
           </motion.div>

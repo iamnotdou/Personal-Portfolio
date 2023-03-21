@@ -53,6 +53,7 @@ function Pages() {
         {pages.map(({ name, icon, link, des, warn }) => (
           <div
             id="page"
+            key={name}
             className="flex flex-col justify-between p-4 gap-2 rounded-md cursor-pointer transition-all border border-white/10 relative hover:bg-white/5"
             onClick={() => {
               link && router.push("/" + link);
